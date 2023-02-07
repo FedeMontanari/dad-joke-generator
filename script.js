@@ -1,9 +1,9 @@
 const jokeEl = document.getElementById("joke");
 const jokeBtn = document.getElementById("jokeBtn");
-const vibeBtn = document.getElementById("vibrateBtn");
+// const vibeBtn = document.getElementById("vibrateBtn");
 
 jokeBtn.addEventListener("click", generateJoke);
-vibeBtn.addEventListener("click", vibrate);
+// vibeBtn.addEventListener("click", vibrate);
 
 generateJoke();
 
@@ -18,11 +18,11 @@ async function generateJoke() {
   jokeEl.innerHTML = data.joke;
 }
 
-async function vibrate() {
-  if (navigator.userAgentData.mobile) {
-    navigator.vibrate();
-    alert("Vibration!");
-  } else {
-    alert("You're not on mobile!");
-  }
-}
+// async function vibrate() {
+//   if (navigator.userAgentData.mobile) {
+//     navigator.vibrate();
+//     alert("Vibration!");
+//   } else {
+//     alert("You're not on mobile!");
+//   }
+// }
