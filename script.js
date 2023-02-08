@@ -3,7 +3,7 @@ const jokeBtn = document.getElementById("jokeBtn");
 const vibeBtn = document.getElementById("vibrateBtn");
 
 jokeBtn.addEventListener("click", generateJoke);
-vibeBtn.addEventListener("click", navigator.vibrate(1000));
+vibeBtn.addEventListener("click", vibrate);
 
 generateJoke();
 
@@ -18,6 +18,10 @@ async function generateJoke() {
   jokeEl.innerHTML = data.joke;
 }
 
-if (navigator.userAgentData.mobile) {
+if (navigator.userAgentData?.mobile) {
   vibeBtn.hidden = false;
+}
+
+function vibrate() {
+  navigator.vibrate(1000);
 }
